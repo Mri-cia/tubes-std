@@ -10,6 +10,7 @@ typedef struct Bishops infotype;
 
 struct Bishops{
     string name;
+    string type;
     int reign;
     string origin;
 };
@@ -27,8 +28,8 @@ void insertNode(adrNode &p, adrNode q);
 void deleteNode(adrNode &, adrNode q);
 adrNode searchNode(adrNode p);
 void printNode(adrNode p);
-void showPostTraversal(adrNode p);
-void showPreTraversal(adrNode p);
-void showInOrderTraversal(adrNode p);
+void showPostTraversal(adrNode root);
+void showPreTraversal(adrNode root);
+void showInOrderTraversal(adrNode root);
 
 #endif // NODE_H_INCLUDED

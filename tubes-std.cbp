@@ -32,8 +32,10 @@
 			<Add option="-Wall" />
 			<Add option="-fexceptions" />
 		</Compiler>
-		<Unit filename="bishops.h" />
+		<Unit filename="initData.cpp" />
+		<Unit filename="initData.h" />
 		<Unit filename="main.cpp" />
+		<Unit filename="node.cpp" />
 		<Unit filename="node.h" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
