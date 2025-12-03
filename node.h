@@ -21,10 +21,14 @@ struct Node{
     vector<adrNode> children;
 };
 
+struct Tree{
+    adrNode root;
+};
+
 
 adrNode createElm(infotype x);
-void createTree(adrNode &p);
-void insertNode(adrNode &p, adrNode q);
+void createTree(adrNode &root);
+void insertNode(adrNode &root, adrNode p, string name);
 void deleteNode(adrNode &, adrNode q);
 adrNode searchNode(adrNode p);
 void printNode(adrNode p);
