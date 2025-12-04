@@ -17,3 +17,18 @@
 1764218986 source:c:\users\syams\onedrive\documents\kuliah\std tp\tubes-std-main\tubes-std-main\initdata.cpp
 	"initData.h"
 
+1764218986 source:c:\users\syams\onedrive\documents\github\tubes-std\initdata.cpp
+	"initData.h"
+
+1764218986 c:\users\syams\onedrive\documents\github\tubes-std\initdata.h
+	"node.h"
+
+1764830180 c:\users\syams\onedrive\documents\github\tubes-std\node.h
+	<iostream>
+	<vector>
+
+1764218986 source:c:\users\syams\onedrive\documents\github\tubes-std\main.cpp
+	<iostream>
+	"node.h"
+	"initData.h"
+

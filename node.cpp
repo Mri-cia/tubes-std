@@ -23,24 +23,24 @@ void insertNode(adrNode &root, adrNode p, string name){
     }
 };
 
-void deleteNode(adrNode &, adrNode q){
+void deleteNode(adrNode &root, adrNode p){
 
 };
 
-adrNode searchNode(adrNode p){
+adrNode searchNode(adrNode root){
 
 };
 
-void printNode(adrNode p){
+void printNode(adrNode root){
     cout << "---------------------------" << endl;
-    cout << "Nama           : " << p->info.name << endl;
-    cout << "Jabatan        : " << p->info.type << endl;
-    cout << "Masa Mengabdi  : " << p->info.reign << endl;
-    cout << "Asal           : " << p->info.origin << endl;
+    cout << "Nama           : " << root->info.name << endl;
+    cout << "Jabatan        : " << root->info.type << endl;
+    cout << "Masa Mengabdi  : " << root->info.reign << endl;
+    cout << "Asal           : " << root->info.origin << endl;
     cout << "---------------------------" << endl;
 };
 
-void showPreTraversal(adrNode p){
+void showPreTraversal(adrNode root){
     if(root == nullptr){return};
 
     printNode(root);
@@ -54,4 +54,4 @@ void showPostTraversal(adrNode root){
     printNode(root);
 };
 
-void showInOrderTraversal(adrNode p);
+void showInOrderTraversal(adrNode root);

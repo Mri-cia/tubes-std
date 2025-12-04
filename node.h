@@ -17,7 +17,6 @@ struct Bishops{
 
 struct Node{
     infotype info;
-
     vector<adrNode> children;
 };
 
@@ -29,9 +28,9 @@ struct Tree{
 adrNode createElm(infotype x);
 void createTree(adrNode &root);
 void insertNode(adrNode &root, adrNode p, string name);
-void deleteNode(adrNode &, adrNode q);
-adrNode searchNode(adrNode p);
-void printNode(adrNode p);
+void deleteNode(adrNode &root, adrNode p);
+adrNode searchNode(adrNode root);
+void printNode(adrNode root);
 void showPostTraversal(adrNode root);
 void showPreTraversal(adrNode root);
 void showInOrderTraversal(adrNode root);
