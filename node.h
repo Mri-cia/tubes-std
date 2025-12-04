@@ -28,8 +28,8 @@ struct Tree{
 adrNode createElm(infotype x);
 void createTree(adrNode &root);
 void insertNode(adrNode &root, adrNode p, string name);
-void deleteNode(adrNode &root, adrNode p);
-adrNode searchNode(adrNode root);
+void deleteNode(adrNode &root, adrNode &p);
+adrNode searchNode(adrNode root, string name);
 void printNode(adrNode root);
 void showPostTraversal(adrNode root);
 void showPreTraversal(adrNode root);

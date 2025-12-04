@@ -23,12 +23,25 @@ void insertNode(adrNode &root, adrNode p, string name){
     }
 };
 
-void deleteNode(adrNode &root, adrNode p){
-
+void deleteNode(adrNode &root, string name) {
 };
 
-adrNode searchNode(adrNode root){
+adrNode searchNode(adrNode root, string name){
+    if(root == nullptr) {
+        return nullptr;
+    }
 
+    if(root->info.name == name) {
+        return root;
+    }
+
+    for(adrNode child : root->children){
+        adrNode res = searchNode(root, name);
+        if(res != nullptr) {
+            return res;
+        }
+    }
+    return nullptr;
 };
 
 void printNode(adrNode root){
@@ -41,17 +54,32 @@ void printNode(adrNode root){
 };
 
 void showPreTraversal(adrNode root){
-    if(root == nullptr){return};
+    if(root == nullptr) return;
 
-    printNode(root);
-    showPostTraversal(root->children);
+    for(adrNode child : root->children){
+        printNode(root);
+        showPostTraversal(child);
+    }
 };
 
 void showPostTraversal(adrNode root){
-    if(root == nullptr){return};
+    if(root == nullptr) return;
 
-    showPostTraversal(root->children);
-    printNode(root);
+    for(adrNode child : root->children){
+        showPostTraversal(child);
+        printNode(root);
+    }
 };
 
-void showInOrderTraversal(adrNode root);
+void showInOrderTraversal(adrNode root){
+    if(root == nullptr) return;
+    int counter = 0;
+
+    for(adrNode child : root->children){
+        if(counter > 0){
+            printNode(root);
+        }
+        showPostTraversal(child);
+        printNode(root);
+    }
+};
