@@ -23,7 +23,43 @@ void insertNode(adrNode &root, adrNode p, string name){
     }
 };
 
+void deleteSubtree(adrNode node) {
+    if (node == nullptr) return;
+
+    for (int i = 0; i < node->children.size(); i++) {
+        deleteSubtree(node->children[i]);
+    }
+
+    delete node;
+}
+
 void deleteNode(adrNode &root, string name) {
+    if (root == nullptr) {
+        return;
+    }
+
+    if (root->info.name == name) {
+        deleteSubtree(root);
+        root = nullptr;
+        return;
+    }
+
+    for (int i = 0; i < root->children.size(); i++) {
+
+        if (root->children[i]->info.name == name) {
+            deleteSubtree(root->children[i]);
+
+            for (int j = i; j < root->children.size() - 1; j++) {
+                root->children[j] = root->children[j+1];
+            }
+
+            root->children.pop_back();
+
+            return;
+        }
+
+        deleteNode(root->children[i], name);
+    }
 };
 
 adrNode searchNode(adrNode root, string name){
