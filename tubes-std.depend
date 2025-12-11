@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1764829535 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\main.cpp
+1765411354 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\main.cpp
 	<iostream>
 	"node.h"
 	"initData.h"
@@ -34,13 +34,17 @@
 	"node.h"
 	"initData.h"
 
-1764829535 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.cpp
+1765411662 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.cpp
 	"initData.h"
 
-1764829535 d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.h
+1765411184 d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.h
 	"node.h"
 
-1764831822 d:\kuliah\semester 3\std\tubes-std\tubes-std\node.h
+1765409740 d:\kuliah\semester 3\std\tubes-std\tubes-std\node.h
 	<iostream>
 	<vector>
+
+1765411972 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\node.cpp
+	"node.h"
+	<iostream>
 

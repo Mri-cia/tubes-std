@@ -25,10 +25,10 @@ struct Tree{
 };
 
 
-adrNode createElm(infotype x);
 void createTree(adrNode &root);
+adrNode createElm(string name, string type, int reign, string origin);
 void insertNode(adrNode &root, adrNode p, string name);
-void deleteNode(adrNode &root, adrNode &p);
+void deleteNode(adrNode &root, string name);
 adrNode searchNode(adrNode root, string name);
 void printNode(adrNode root);
 void showPostTraversal(adrNode root);

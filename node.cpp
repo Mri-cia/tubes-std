@@ -2,14 +2,18 @@
 #include <iostream>
 using namespace std;
 
-adrNode createElm(infotype x){
-    adrNode p = new Node;
-    p->info = x;
-    return p;
-};
-
 void createTree(adrNode &root){
    root = nullptr;
+};
+
+adrNode createElm(string name, string type, int reign, string origin){
+
+    adrNode p = new Node;
+    p->info.name = name;
+    p->info.origin = origin;
+    p->info.reign = reign;
+    p->info.type = type;
+    return p;
 };
 
 void insertNode(adrNode &root, adrNode p, string name){
@@ -19,7 +23,7 @@ void insertNode(adrNode &root, adrNode p, string name){
         root->children.push_back(p);
     }
     for(adrNode child : root->children){
-        insertNode(root, p, name);
+        insertNode(child, p, name);
     }
 };
 
@@ -92,19 +96,20 @@ void printNode(adrNode root){
 void showPreTraversal(adrNode root){
     if(root == nullptr) return;
 
+    printNode(root);
     for(adrNode child : root->children){
-        printNode(root);
-        showPostTraversal(child);
+        showPreTraversal(child);
     }
 };
 
 void showPostTraversal(adrNode root){
     if(root == nullptr) return;
 
+
     for(adrNode child : root->children){
         showPostTraversal(child);
-        printNode(root);
     }
+        printNode(root);
 };
 
 void showInOrderTraversal(adrNode root){
@@ -112,10 +117,11 @@ void showInOrderTraversal(adrNode root){
     int counter = 0;
 
     for(adrNode child : root->children){
-        if(counter > 0){
+        if(counter == 1){
             printNode(root);
         }
-        showPostTraversal(child);
-        printNode(root);
+        showInOrderTraversal(child);
+        counter++;
     }
+        printNode(root);
 };
