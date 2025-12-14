@@ -135,5 +135,6 @@ void combineRootAsParent(adrNode &mainRoot, adrNode newRoot, string newParent){
 void combineRootAsChild(adrNode &mainRoot, adrNode newRoot, string parent){
     adrNode temp = searchNode(mainRoot, newParent);
     temp->children[0] = newRoot;
+    mainRoot = temp;
 };
 
