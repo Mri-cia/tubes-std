@@ -1,7 +1,7 @@
 #include "initData.h"
 
 
-void line1440(adrNode &root){
+void dEstoutevilleLinieage(adrNode &root){
     //Tingkat 1
     insertNode(root, createElm("Guillaume d'Estouteville", "Cardinal", 43, "Italy"), "");
 

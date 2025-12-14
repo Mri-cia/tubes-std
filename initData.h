@@ -2,7 +2,7 @@
 #define INITDATA_H_INCLUDED
 #include "node.h"
 
-void line1440(adrNode &root);
+void dEstoutevilleLinieage(adrNode &root);
 void line1290(adrNode &root);
 void linePopeLeoXIV(adrNode &root);
 
