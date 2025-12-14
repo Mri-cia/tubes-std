@@ -34,9 +34,6 @@ void line1440(adrNode &root){
 
 };
 
-void line1290(adrNode &root){
-};
-
 void linePopeLeoXIV(adrNode &root){
 
 };

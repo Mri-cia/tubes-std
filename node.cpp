@@ -125,3 +125,9 @@ void showInOrderTraversal(adrNode root){
     }
         printNode(root);
 };
+
+void combineRootAsParent(adrNode &mainRoot, adrNode newRoot){
+    newRoot->children[0] = mainRoot;
+    mainRoot = newRoot;
+
+};

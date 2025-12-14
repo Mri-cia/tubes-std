@@ -34,5 +34,7 @@ void printNode(adrNode root);
 void showPostTraversal(adrNode root);
 void showPreTraversal(adrNode root);
 void showInOrderTraversal(adrNode root);
+void showLineage(adrNode root, string name);
+void combineRootAsParent(adrNode root, adrNode newRoot);
 
 #endif // NODE_H_INCLUDED
