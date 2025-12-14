@@ -28,12 +28,43 @@ void dEstoutevilleLinieage(adrNode &root){
     insertNode(root, createElm("Antonio Sanseverino", "Cardinal", 13, "Italy"), "Clement VII");
 
     //Tingkat 8
-    insertNode(root, createElm("Scipione Rebiba", "Cardinal", 36, "Italy"), "Paul IV");
     insertNode(root, createElm("Alfonso Gesuaido di Conza", "Cardinal", 39, "Italy"), "Francesco Pisani");
     insertNode(root, createElm("Giovanni Michele Saraceni", "Cardinal", 32, "Italy"), "Antionio Sanseverio");
 
+    //Tingkat 9
+    insertNode(root, createElm("Saint Pius V", "Pope", 6, "Italy"), "Giovanni Michele Saraceni");
+
+    //Tingkat 10
+    insertNode(root, createElm("Innico d'Avalos d'Aragona", "Cardinal", 34, "Italy"), "Saint Pius V");
+
+    //Tingkat 11
+    insertNode(root, createElm("Scipione Gonzaga", "Cardinal", 34, "Italy"), "Innico d'Avalos d'Aragona");
+
+    //Tingkat 12
+    insertNode(root, createElm("Fabio Biondi da Montalto", "Bishop", 30, "Italy"), "Scipione Gonzaga");
+
+    //Tingkat 13
+    insertNode(root, createElm("Urban VIII", "Pope", 21, "Italy"), "Fabio Biondi da Montalto");
+
+    //Tingkat 14
+    insertNode(root, createElm("Cosimo de Torres", "Cardinal", 21, "Italy"), "Urban VIII");
+
+    //Tingkat 15
+    insertNode(root, createElm("Francesco Maria Brancaccio", "Cardinal", 48, "Italy"), "Cosimo de Torres");
+
+    //Tingkat 16
+    insertNode(root, createElm("Miguel Juan Balaguer de Calamasa", "Bishop", 48, "Spain"), "Francesco Maria Brancaccio");
+
+    //Tingkat 17
+    insertNode(root, createElm("Alexander VII", "Pope", 48, "Italy"), "Miguel Juan Balaguer de Calamasa");
 };
 
-void linePopeLeoXIV(adrNode &root){
+void rebibaLineage(adrNode &root){
+    //Tingkat 1
+    insertNode(root, createElm("Scipione Rebiba", "Cardinal", 36, "Italy"), "");
+
+};
+
+void clementVIIILineage(adrNode &root){
 
 };

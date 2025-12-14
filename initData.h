@@ -3,8 +3,8 @@
 #include "node.h"
 
 void dEstoutevilleLinieage(adrNode &root);
-void line1290(adrNode &root);
-void linePopeLeoXIV(adrNode &root);
+void rebibaLineage(adrNode &root);
+void clementVIIILineage(adrNode &root);
 
 
 
