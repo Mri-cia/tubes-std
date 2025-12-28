@@ -1,5 +1,6 @@
 #include <iostream>
 #include <limits>
+#include <string>
 #include "node.h"
 
 void clearInError(){
@@ -17,7 +18,7 @@ void show(adrNode root){
 }
 
 
-void lookList(adrNode root){
+void lookList(const adrNode &root){
     int in = 0;
     bool correctIn;
 
@@ -54,7 +55,7 @@ void lookList(adrNode root){
                 return;
             default:
                 correctIn = false;
-                cout << "Salah memilih menu; Enter untuk submit ulang" << endl;
+                cout << "Salah memilih menu;" << endl;
                 PAUSE_CLI;
                 break;
             }
@@ -64,4 +65,31 @@ void lookList(adrNode root){
     } while(!(correctIn));
 
     PAUSE_CLI;
+}
+
+void addPriest(adrNode &root){
+    CLEAR_CLI;
+    string nama;
+    string type;
+    int reign;
+    string origin;
+    string parent;
+
+    cout << "========== Tambah Imam ==========" << endl;
+    cout << "Nama           : " ;
+    getline(cin >> ws, nama);
+    cout << "Jabatan        : ";
+    cin >> type;
+    cout << "Lama Mengabdi  : ";
+    cin >> reign;
+    cout << "Asal           : ";
+    cin >> origin;
+    cout << "Diberkati oleh : ";
+    getline(cin >> ws, parent);
+
+    adrNode p = createElm(nama, type, reign, origin);
+
+    insertNode(root, p, parent);
+
+    clearInError();
 }

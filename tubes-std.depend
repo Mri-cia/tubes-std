@@ -1,5 +1,5 @@
 # depslib dependency file v1.0
-1766927663 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\main.cpp
+1766929775 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\main.cpp
 	"node.h"
 
 1764218986 source:c:\users\syams\onedrive\documents\kuliah\std tp\tubes-std-main\tubes-std-main\main.cpp
@@ -46,8 +46,9 @@
 	"node.h"
 	<iostream>
 
-1766928166 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\util.cpp
+1766932218 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\util.cpp
 	<iostream>
 	<limits>
+	<string>
 	"node.h"
 
