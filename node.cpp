@@ -69,14 +69,12 @@ void deleteNode(adrNode &root, string name) {
 adrNode searchNode(adrNode root, string name){
     if(root == nullptr) {
         return nullptr;
-    }
-
-    if(root->info.name == name) {
+    } else if(root->info.name == name) {
         return root;
     }
 
     for(adrNode child : root->children){
-        adrNode res = searchNode(root, name);
+        adrNode res = searchNode(child, name);
         if(res != nullptr) {
             return res;
         }

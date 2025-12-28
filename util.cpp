@@ -93,3 +93,33 @@ void addPriest(adrNode &root){
 
     clearInError();
 }
+
+void editPriest(adrNode &root){
+    CLEAR_CLI;
+    string nama;
+    string type;
+    int reign;
+    string origin;
+    string parent;
+
+    cout << "========== Ubah Data Imam ==========" << endl;
+    cout << "Nama           : " ;
+    getline(cin >> ws, nama);
+
+    adrNode p = searchNode(root, nama);
+    cout << "Jabatan        : ";
+    cin >> type;
+    cout << "Lama Mengabdi  : ";
+    cin >> reign;
+    cout << "Asal           : ";
+    cin >> origin;
+    //cout << "Diberkati oleh : ";
+    //getline(cin >> ws, parent);
+
+    p->info.type = type;
+    p->info.reign = reign;
+    p->info.origin = origin;
+
+    clearInError();
+}
+

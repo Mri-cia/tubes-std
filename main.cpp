@@ -15,9 +15,9 @@ void lookList(const adrNode &root);
 
 void addPriest(adrNode &root);
 
-void editPriest();
+void editPriest(adrNode &root);
 
-void deletePriest();
+void deletePriest(adrNode &root);
 
 
 
@@ -60,8 +60,12 @@ int main()
                 addPriest(root);
                 break;
             case 3:
+                editPriest(root);
                 break;
             case 4:
+                break;
+            case 0:
+                cout << "exiting..." << endl;
                 break;
             default:
                 cout << "Salah memilih menu;" << endl;
