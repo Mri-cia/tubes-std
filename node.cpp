@@ -88,7 +88,7 @@ void printNode(adrNode root){
     cout << "---------------------------" << endl;
     cout << "Nama           : " << root->info.name << endl;
     cout << "Jabatan        : " << root->info.type << endl;
-    cout << "Masa Mengabdi  : " << root->info.reign << endl;
+    cout << "Masa Mengabdi  : " << root->info.reign << " Tahun"<< endl;
     cout << "Asal           : " << root->info.origin << endl;
     cout << "---------------------------" << endl;
 };
@@ -133,7 +133,7 @@ void combineRootAsParent(adrNode &mainRoot, adrNode newRoot, string newParent){
 };
 
 void combineRootAsChild(adrNode &mainRoot, adrNode newRoot, string parent){
-    adrNode temp = searchNode(mainRoot, newParent);
+    adrNode temp = searchNode(mainRoot, parent);
     temp->children[0] = newRoot;
     mainRoot = temp;
 };

@@ -3,6 +3,9 @@
 #include <iostream>
 #include <vector>
 
+#define CLEAR_CLI system("cls")
+#define PAUSE_CLI system("pause")
+
 using namespace std;
 
 typedef struct Node *adrNode;

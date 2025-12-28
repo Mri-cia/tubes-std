@@ -1,8 +1,6 @@
 # depslib dependency file v1.0
-1765411354 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\main.cpp
-	<iostream>
+1766927663 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\main.cpp
 	"node.h"
-	"initData.h"
 
 1764218986 source:c:\users\syams\onedrive\documents\kuliah\std tp\tubes-std-main\tubes-std-main\main.cpp
 	<iostream>
@@ -34,17 +32,22 @@
 	"node.h"
 	"initData.h"
 
-1765700970 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.cpp
+1766923946 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.cpp
 	"initData.h"
 
-1765411184 d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.h
+1765702790 d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.h
 	"node.h"
 
-1765701224 d:\kuliah\semester 3\std\tubes-std\tubes-std\node.h
+1766927715 d:\kuliah\semester 3\std\tubes-std\tubes-std\node.h
 	<iostream>
 	<vector>
 
-1765411972 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\node.cpp
+1766924804 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\node.cpp
 	"node.h"
 	<iostream>
+
+1766928166 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\util.cpp
+	<iostream>
+	<limits>
+	"node.h"
 

@@ -59,12 +59,3 @@ void dEstoutevilleLinieage(adrNode &root){
     insertNode(root, createElm("Alexander VII", "Pope", 48, "Italy"), "Miguel Juan Balaguer de Calamasa");
 };
 
-void rebibaLineage(adrNode &root){
-    //Tingkat 1
-    insertNode(root, createElm("Scipione Rebiba", "Cardinal", 36, "Italy"), "");
-
-};
-
-void clementVIIILineage(adrNode &root){
-
-};
