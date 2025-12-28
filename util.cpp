@@ -3,9 +3,11 @@
 #include <string>
 #include "node.h"
 
+#define BUFFER_TRAP cin.ignore(numeric_limits<streamsize>::max(), '\n')
+
 void clearInError(){
     cin.clear();
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    BUFFER_TRAP;
 }
 
 void show(adrNode root){
@@ -123,3 +125,19 @@ void editPriest(adrNode &root){
     clearInError();
 }
 
+void deletePriest(adrNode &root){
+    CLEAR_CLI;
+    //BUFFER_TRAP;
+    string nama;
+
+    cout << "========== Hapus Data Imam ==========" << endl;
+    cout << "Nama           : " ;
+    getline(cin >> ws, nama);
+
+    deleteNode(root, nama);
+
+    cout << "Deleted " << nama << " Data" << endl;
+
+    PAUSE_CLI;
+
+}

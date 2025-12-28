@@ -63,6 +63,7 @@ int main()
                 editPriest(root);
                 break;
             case 4:
+                deletePriest(root);
                 break;
             case 0:
                 cout << "exiting..." << endl;
