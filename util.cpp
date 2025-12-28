@@ -115,8 +115,6 @@ void editPriest(adrNode &root){
     cin >> reign;
     cout << "Asal           : ";
     cin >> origin;
-    //cout << "Diberkati oleh : ";
-    //getline(cin >> ws, parent);
 
     p->info.type = type;
     p->info.reign = reign;
@@ -127,7 +125,6 @@ void editPriest(adrNode &root){
 
 void deletePriest(adrNode &root){
     CLEAR_CLI;
-    //BUFFER_TRAP;
     string nama;
 
     cout << "========== Hapus Data Imam ==========" << endl;
@@ -140,4 +137,52 @@ void deletePriest(adrNode &root){
 
     PAUSE_CLI;
 
+}
+
+void movePriest(adrNode &root){
+    CLEAR_CLI;
+    int in = 0;
+    string nama;
+    adrNode p = nullptr;
+    bool correctIn;
+
+    cout << "========== Pindah Data Imam ==========" << endl;
+    cout << "Nama Imam          : " ;
+    getline(cin >> ws, nama);
+
+    detatchTree(root, nama, p);
+
+    CLEAR_CLI;
+    cout << "======================================" << endl;
+    cout << "1. Sebagai Parent" << endl;
+    cout << "2. Sebagai Child" << endl;
+    cout << "======================================" << endl;
+    cout << "Pilihan: " ;
+    cin >> in;
+
+
+    if(cin.fail()){
+        clearInError();
+        cout << "Invalid type!" << endl;
+        PAUSE_CLI;
+        correctIn = false;
+    } else{
+        switch(in){
+        case 1:
+            combineRootAsParent(root, p);
+            break;
+        case 2:
+            CLEAR_CLI;
+            cout << "========== Nama Imam Sebelum ==========" << endl;
+            cout << "Nama Imam          : " ;
+            getline(cin >> ws, nama);
+            combineRootAsChild(root, p, nama);
+            break;
+        default:
+            correctIn = false;
+            cout << "Salah memilih menu;" << endl;
+            PAUSE_CLI;
+            break;
+        }
+    }
 }

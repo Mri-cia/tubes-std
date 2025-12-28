@@ -124,15 +124,44 @@ void showInOrderTraversal(adrNode root){
         printNode(root);
 };
 
-void combineRootAsParent(adrNode &mainRoot, adrNode newRoot, string newParent){
-    adrNode temp = searchNode(newRoot, newParent);
-    temp->children[0] = mainRoot;
-    mainRoot = temp;
+void detatchTree(adrNode &root, string name, adrNode &keep){
+    if (root == nullptr) {
+        return;
+    }
+
+    if (root->info.name == name) {
+        keep = root;
+        root = nullptr;
+        return;
+    }
+
+
+    for(int i = 0; i < root->children.size(); i++){
+        if(root->children[i]->info.name == name){
+            keep = root->children[i];
+            root->children.erase(root->children.begin() + i);
+            return;
+        }
+
+        detatchTree(root->children[i], name, keep);
+        if(keep != nullptr){
+            return;
+        }
+    }
+
+};
+
+void combineRootAsParent(adrNode &mainRoot, adrNode &newRoot){
+    if(mainRoot != nullptr && newRoot != nullptr){
+        newRoot->children.push_back(mainRoot);
+        mainRoot = newRoot;
+    }
 };
 
 void combineRootAsChild(adrNode &mainRoot, adrNode newRoot, string parent){
     adrNode temp = searchNode(mainRoot, parent);
-    temp->children[0] = newRoot;
-    mainRoot = temp;
+    if(mainRoot != nullptr && newRoot != nullptr){
+        temp->children.push_back(newRoot);
+    }
 };
 

@@ -37,7 +37,8 @@ void printNode(adrNode root);
 void showPostTraversal(adrNode root);
 void showPreTraversal(adrNode root);
 void showInOrderTraversal(adrNode root);
-void combineRootAsParent(adrNode &mainRoot, adrNode newRoot, string newParent);
+void detatchTree(adrNode &root, string name, adrNode &keep);
+void combineRootAsParent(adrNode &mainRoot, adrNode &newRoot);
 void combineRootAsChild(adrNode &mainRoot, adrNode newRoot, string parent);
 
 #endif // NODE_H_INCLUDED
