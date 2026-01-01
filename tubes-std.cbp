@@ -37,6 +37,7 @@
 		<Unit filename="main.cpp" />
 		<Unit filename="node.cpp" />
 		<Unit filename="node.h" />
+		<Unit filename="util.cpp" />
 		<Extensions>
 			<lib_finder disable_auto="1" />
 		</Extensions>

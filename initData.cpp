@@ -1,5 +1,4 @@
-#include "initData.h"
-
+#include "node.h"
 
 void dEstoutevilleLinieage(adrNode &root){
     //Tingkat 1
@@ -29,7 +28,7 @@ void dEstoutevilleLinieage(adrNode &root){
 
     //Tingkat 8
     insertNode(root, createElm("Alfonso Gesuaido di Conza", "Cardinal", 39, "Italy"), "Francesco Pisani");
-    insertNode(root, createElm("Giovanni Michele Saraceni", "Cardinal", 32, "Italy"), "Antionio Sanseverio");
+    insertNode(root, createElm("Giovanni Michele Saraceni", "Cardinal", 32, "Italy"), "Antonio Sanseverino");
 
     //Tingkat 9
     insertNode(root, createElm("Saint Pius V", "Pope", 6, "Italy"), "Giovanni Michele Saraceni");
