@@ -21,6 +21,8 @@ void deletePriest(adrNode &root);
 
 void movePriest(adrNode &root);
 
+void searchPriest(adrNode root);
+
 
 
 int main()
@@ -43,6 +45,7 @@ int main()
         cout << "3. Edit imam di daftar" << endl;
         cout << "4. Hapus imam dari daftar" << endl;
         cout << "5. Pindah node" << endl;
+        cout << "6. Cari Imam" << endl;
         cout << "0. Keluar" << endl;
         cout << "==========================" << endl;
         cout << "Pilihan menu: ";
@@ -70,6 +73,9 @@ int main()
                 break;
             case 5:
                 movePriest(root);
+                break;
+            case 6:
+                searchPriest(root);
                 break;
             case 0:
                 cout << "exiting..." << endl;

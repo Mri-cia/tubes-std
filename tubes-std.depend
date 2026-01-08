@@ -32,8 +32,8 @@
 	"node.h"
 	"initData.h"
 
-1766923946 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.cpp
-	"initData.h"
+1767225688 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.cpp
+	"node.h"
 
 1765702790 d:\kuliah\semester 3\std\tubes-std\tubes-std\initdata.h
 	"node.h"
@@ -46,7 +46,7 @@
 	"node.h"
 	<iostream>
 
-1766938858 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\util.cpp
+1767914568 source:d:\kuliah\semester 3\std\tubes-std\tubes-std\util.cpp
 	<iostream>
 	<limits>
 	<string>

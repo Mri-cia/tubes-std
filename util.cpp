@@ -186,3 +186,13 @@ void movePriest(adrNode &root){
         }
     }
 }
+
+void searchPriest(adrNode root){
+    CLEAR_CLI;
+    string name;
+    adrNode p = new Node;
+    cout << "Imam yang dicari : ";
+    cin >> name;
+    p = searchNode(root, name);
+    printNode(p);
+};
