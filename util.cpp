@@ -189,10 +189,18 @@ void movePriest(adrNode &root){
 
 void searchPriest(adrNode root){
     CLEAR_CLI;
-    string name;
+    string nama = "";
     adrNode p = new Node;
     cout << "Imam yang dicari : ";
-    cin >> name;
-    p = searchNode(root, name);
-    printNode(p);
+    getline(cin >> ws, nama);
+    p = searchNode(root, nama);
+    if(p!= nullptr){
+        printNode(p);
+    }else {
+        cout << "notfound" << endl;
+    }
+
+    PAUSE_CLI;
 };
+
+
