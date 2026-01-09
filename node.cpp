@@ -21,10 +21,12 @@ void insertNode(adrNode &root, adrNode p, string name){
         root = p;
     }else if(root->info.name == name) {
         root->children.push_back(p);
+    } else {
+        for(adrNode child : root->children){
+            insertNode(child, p, name);
+        }
     }
-    for(adrNode child : root->children){
-        insertNode(child, p, name);
-    }
+
 };
 
 void deleteSubtree(adrNode node) {
